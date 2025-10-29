@@ -1,0 +1,238 @@
+// font Montserrat 200/300/400/500
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
+
+// color variables
+$btn-price-main: #f5ff00;
+$btn-price-hover: #e8f01a;
+$page-bg-white: #ffffff;
+$page-bg-grey: #e6e9ee;
+$card-title-bg: #16191e;
+$card-body-bg: #e5eef6;
+
+// for text
+$default-font: "Montserrat", Arial, sans-serif;
+
+$main-text: #16191e;
+$card-text: #83868c;
+$attention-text: #f5ff00;
+
+// imports
+@import "booking";
+@import "list_of_services";
+// @import "services-prices";
+// @import "prices";
+@import "certificates";
+@import "banner";
+@import "map";
+@import "date_checkbox";
+
+// global styles
+* {
+  font-family: $default-font;
+  font-weight: 400;
+}
+
+body {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (max-width: 767px) {
+    width: 80%;
+  }
+}
+
+img {
+  max-width: 100%; // makes images responsive
+}
+
+/* Header Styles */
+.header__nav-container {
+  background-color: #e6e9ee;
+}
+
+.header__nav {
+  &-brand {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  & a {
+    color: #16191e;
+  }
+
+  &-phone {
+    color: $btn-price-main;
+  }
+}
+
+.header__nav-brand:hover {
+  color: #16191e;
+}
+
+.header__nav-link a:hover {
+  border: 1px solid $attention-text;
+  border-radius: 30px;
+  background-color: $attention-text;
+  color: #16191e;
+}
+
+.header__nav-phone:hover {
+  border: 1px solid $attention-text;
+  border-radius: 30px;
+  background-color: $attention-text;
+  color: #16191e;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #e6e9ee;
+}
+
+.footer__nav-brand {
+  & a {
+    color: #16191e;
+    font-size: 24px;
+  }
+}
+
+.footer__nav-link {
+  & a {
+    color: #16191e;
+  }
+}
+
+.footer__container a:hover {
+  color: #16191e;
+}
+
+/* Slider Styles */
+.slider {
+  margin: 0 100px;
+  padding: 50px;
+}
+
+.slider__container {
+  background-color: #e6e9ee;
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  padding-top: 50px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  color: #16191e;
+}
+
+.item_col {
+  align-self: center;
+  text-align: center;
+}
+
+.popup__open {
+  padding: 10px;
+  background-color: #e8f01a;
+  color: #16191e;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.popup__open:hover {
+  background-color: #e8f01a;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+#slider__img {
+  object-fit: cover;
+  width: 60%;
+  height: 400px;
+  margin: 0 50px;
+}
+
+.previous,
+.next {
+  align-self: center;
+  cursor: pointer;
+}
+
+.arrow_mobile {
+  display: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 767px) {
+  .navbar {
+    padding-left: 0;
+  }
+
+  .slider__container {
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .slider_item {
+    flex-direction: column-reverse;
+  }
+
+  #slider__img {
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .previous,
+  .next {
+    display: none;
+  }
+
+  .arrow_mobile {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .previous_mobile,
+  .next_mobile {
+    align-self: center;
+    cursor: pointer;
+    transition: 0.5s;
+    color: blue;
+  }
+}
+
+.slider .item img {
+  object-fit: cover;
+  width: 50%;
+  height: 400px;
+}
+
+.previous,
+.next {
+  align-self: center;
+  cursor: pointer;
+}
